@@ -8,3 +8,6 @@ CREATE TABLE `machine_server` (
   `ms_port_list` varchar(200) DEFAULT NULL COMMENT '端口使用列表',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
