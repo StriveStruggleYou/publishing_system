@@ -30,5 +30,12 @@ else
  echo "$ssh_key"
 fi
 
+#检查JDK是否安装,使用yum安装，使用本地安装
+
+
+#检查Maven 是否安装
+
+
+
 
 
