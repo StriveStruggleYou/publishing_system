@@ -196,7 +196,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     // super.addResourceHandlers(registry);
 
-    registry.addResourceHandler("/**").addResourceLocations("classpath:/webapps/");
+    registry.addResourceHandler("/**").addResourceLocations("classpath:/webapps/static/");
 
     registry.addResourceHandler("swagger-ui.html")
         .addResourceLocations("classpath:/META-INF/resources/");
