@@ -1,6 +1,5 @@
 package org.ssy.publish.web.controller;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import javax.persistence.Column;
@@ -9,8 +8,9 @@ import org.springframework.util.ReflectionUtils.FieldCallback;
 import org.springframework.util.StringUtils;
 import org.ssy.publish.web.core.Result;
 import org.ssy.publish.web.core.ResultGenerator;
-import org.ssy.publish.web.model.MachineServer;
-import org.ssy.publish.web.service.MachineServerService;
+import org.ssy.publish.web.model.Application;
+import org.ssy.publish.web.model.MachinePath;
+import org.ssy.publish.web.service.ApplicationService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,41 +26,41 @@ import org.ssy.publish.web.vo.TableColumn;
  * Created by CodeGenerator on 2018/06/29.
  */
 @RestController
-@RequestMapping("/machine/server")
-public class MachineServerController {
+@RequestMapping("/application")
+public class ApplicationController {
 
   @Resource
-  private MachineServerService machineServerService;
+  private ApplicationService applicationService;
 
   @PostMapping("/add")
-  public Result add(MachineServer machineServer) {
-    machineServerService.save(machineServer);
+  public Result add(Application application) {
+    applicationService.save(application);
     return ResultGenerator.genSuccessResult();
   }
 
   @PostMapping("/delete")
   public Result delete(@RequestParam Integer id) {
-    machineServerService.deleteById(id);
+    applicationService.deleteById(id);
     return ResultGenerator.genSuccessResult();
   }
 
   @PostMapping("/update")
-  public Result update(MachineServer machineServer) {
-    machineServerService.update(machineServer);
+  public Result update(Application application) {
+    applicationService.update(application);
     return ResultGenerator.genSuccessResult();
   }
 
   @PostMapping("/detail")
   public Result detail(@RequestParam Integer id) {
-    MachineServer machineServer = machineServerService.findById(id);
-    return ResultGenerator.genSuccessResult(machineServer);
+    Application application = applicationService.findById(id);
+    return ResultGenerator.genSuccessResult(application);
   }
 
   @PostMapping("/list")
   public Result list(@RequestParam(defaultValue = "0") Integer page,
       @RequestParam(defaultValue = "0") Integer size) {
     PageHelper.startPage(page, size);
-    List<MachineServer> list = machineServerService.findAll();
+    List<Application> list = applicationService.findAll();
     PageInfo pageInfo = new PageInfo(list);
     return ResultGenerator.genSuccessResult(pageInfo);
   }
@@ -70,15 +70,15 @@ public class MachineServerController {
   public Object rows_json(@RequestParam(defaultValue = "0") Integer page,
       @RequestParam(defaultValue = "0") Integer size) {
     PageHelper.startPage(page, size);
-    List<MachineServer> list = machineServerService.findAll();
+    List<Application> list = applicationService.findAll();
     return list;
   }
 
 
-  @PostMapping("columns_json")
+  @PostMapping("/columns_json")
   public Object columns_json() {
     final List<TableColumn> list = new ArrayList<TableColumn>();
-    ReflectionUtils.doWithFields(MachineServer.class, new FieldCallback() {
+    ReflectionUtils.doWithFields(Application.class, new FieldCallback() {
       public void doWith(Field field) throws IllegalArgumentException,
           IllegalAccessException {
         TableColumn tableColumn = new TableColumn();
