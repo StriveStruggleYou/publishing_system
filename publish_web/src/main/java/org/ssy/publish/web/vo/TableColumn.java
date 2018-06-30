@@ -1,6 +1,6 @@
 package org.ssy.publish.web.vo;
 
-public class Column {
+public class TableColumn {
 
   private String name;
 
