@@ -3,119 +3,130 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title> - 表单向导</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+  <title> - 表单向导</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
 
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+  <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+  <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+  <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css?v=4.1.0" rel="stylesheet">
 
 </head>
 
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="ibox float-e-margins">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <p>
+            服务器初始向导
+          </p>
+          <div id="wizard">
+            <h1>第一步</h1>
+            <div class="step-content" style="position: relative">
+              <div class="text-center m-t-md">
+                <h2>选择机器和初始化方式</h2>
+
                 <div class="ibox-content">
-                    <p>
-                        打包服务器初始向导
-                    </p>
-                    <div id="wizard">
-                        <h1>第一步</h1>
-                        <div class="step-content" style="position: relative">
-                            <div class="text-center m-t-md">
-                                <h2>第一步</h2>
+                  <form class="form-horizontal">
 
-                              <div class="ibox-content">
-                                <form class="form-horizontal">
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">机器名称：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">机器描述：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">机器类型：</label>
-                                    <div class="col-sm-6">
-                                      <select class="form-control" name=""></select>
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">内网IP列表：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">外网IP列表：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">使用端口列表：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label">开发端口列表：</label>
-                                    <div class="col-sm-6">
-                                      <input type="text" name="" class="form-control" placeholder="请输入文本"> <span class="help-block m-b-none">说明文字</span>
-
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-                            </div>
-                        </div>
-
-                        <h1>第二步</h1>
-                        <div class="step-content" style="position: relative">
-                            <div class="text-center m-t-md">
-                                <h2>第二步</h2>
-                                <p>
-                                    这是第二步的内容
-                                </p>
-                            </div>
-                        </div>
-
-                        <h1>第三步</h1>
-                        <div class="step-content" style="position: relative">
-                            <div class="text-center m-t-md">
-                                <h2>第三步</h2>
-                                <p>
-                                    这是第三步的内容
-                                </p>
-                            </div>
-                        </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">机器名称：</label>
+                      <div class="col-sm-6">
+                        <select class="form-control" name="">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                      </div>
                     </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">机器名称：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">机器描述：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">机器类型：</label>
+                      <div class="col-sm-6">
+                        <select class="form-control" name=""></select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">内网IP列表：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">外网IP列表：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">使用端口列表：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">开发端口列表：</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="" class="form-control" placeholder="请输入文本">
+
+                      </div>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+
+            <h1>第二步</h1>
+            <div class="step-content" style="position: relative">
+              <div class="text-center m-t-md">
+                <h2>第二步</h2>
+                <p>
+                  这是第二步的内容
+                </p>
+              </div>
+            </div>
+
+            <h1>第三步</h1>
+            <div class="step-content" style="position: relative">
+              <div class="text-center m-t-md">
+                <h2>第三步</h2>
+                <p>
+                  这是第三步的内容
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- 全局js -->
@@ -136,75 +147,75 @@
 
 
 <script>
-    $(document).ready(function () {
-        $("#wizard").steps({});
+  $(document).ready(function () {
+    $("#wizard").steps({});
 
-        $("#form").steps({
-            bodyTag: "fieldset",
-            onStepChanging: function (event, currentIndex, newIndex) {
-                // Always allow going backward even if the current step contains invalid fields!
-                if (currentIndex > newIndex) {
-                    return true;
-                }
+    $("#form").steps({
+      bodyTag: "fieldset",
+      onStepChanging: function (event, currentIndex, newIndex) {
+        // Always allow going backward even if the current step contains invalid fields!
+        if (currentIndex > newIndex) {
+          return true;
+        }
 
-                // Forbid suppressing "Warning" step if the user is to young
-                if (newIndex === 3 && Number($("#age").val()) < 18) {
-                    return false;
-                }
+        // Forbid suppressing "Warning" step if the user is to young
+        if (newIndex === 3 && Number($("#age").val()) < 18) {
+          return false;
+        }
 
-                var form = $(this);
+        var form = $(this);
 
-                // Clean up if user went backward before
-                if (currentIndex < newIndex) {
-                    // To remove error styles
-                    $(".body:eq(" + newIndex + ") label.error", form).remove();
-                    $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-                }
+        // Clean up if user went backward before
+        if (currentIndex < newIndex) {
+          // To remove error styles
+          $(".body:eq(" + newIndex + ") label.error", form).remove();
+          $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+        }
 
-                // Disable validation on fields that are disabled or hidden.
-                form.validate().settings.ignore = ":disabled,:hidden";
+        // Disable validation on fields that are disabled or hidden.
+        form.validate().settings.ignore = ":disabled,:hidden";
 
-                // Start validation; Prevent going forward if false
-                return form.valid();
-            },
-            onStepChanged: function (event, currentIndex, priorIndex) {
-                // Suppress (skip) "Warning" step if the user is old enough.
-                if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                    $(this).steps("next");
-                }
+        // Start validation; Prevent going forward if false
+        return form.valid();
+      },
+      onStepChanged: function (event, currentIndex, priorIndex) {
+        // Suppress (skip) "Warning" step if the user is old enough.
+        if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+          $(this).steps("next");
+        }
 
-                // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-                if (currentIndex === 2 && priorIndex === 3) {
-                    $(this).steps("previous");
-                }
-            },
-            onFinishing: function (event, currentIndex) {
-                var form = $(this);
+        // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+        if (currentIndex === 2 && priorIndex === 3) {
+          $(this).steps("previous");
+        }
+      },
+      onFinishing: function (event, currentIndex) {
+        var form = $(this);
 
-                // Disable validation on fields that are disabled.
-                // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-                form.validate().settings.ignore = ":disabled";
+        // Disable validation on fields that are disabled.
+        // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+        form.validate().settings.ignore = ":disabled";
 
-                // Start validation; Prevent form submission if false
-                return form.valid();
-            },
-            onFinished: function (event, currentIndex) {
-                var form = $(this);
+        // Start validation; Prevent form submission if false
+        return form.valid();
+      },
+      onFinished: function (event, currentIndex) {
+        var form = $(this);
 
-                // Submit form input
-                form.submit();
-            }
-        }).validate({
-            errorPlacement: function (error, element) {
-                element.before(error);
-            },
-            rules: {
-                confirm: {
-                    equalTo: "#password"
-                }
-            }
-        });
+        // Submit form input
+        form.submit();
+      }
+    }).validate({
+      errorPlacement: function (error, element) {
+        element.before(error);
+      },
+      rules: {
+        confirm: {
+          equalTo: "#password"
+        }
+      }
     });
+  });
 </script>
 
 

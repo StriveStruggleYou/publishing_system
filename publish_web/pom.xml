@@ -137,6 +137,22 @@
       <version>3.0.0</version>
     </dependency>
 
+
+    <!-- https://mvnrepository.com/artifact/com.hierynomus/sshj -->
+    <dependency>
+      <groupId>com.hierynomus</groupId>
+      <artifactId>sshj</artifactId>
+      <version>0.24.0</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/net.sf.expectit/expectit-core -->
+    <dependency>
+      <groupId>net.sf.expectit</groupId>
+      <artifactId>expectit-core</artifactId>
+      <version>0.8.1</version>
+    </dependency>
+
   </dependencies>
 
   <build>
