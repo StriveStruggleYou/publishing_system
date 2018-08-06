@@ -99,4 +99,10 @@ public class MachineServerController {
     });
     return list;
   }
+
+  @PostMapping("init_machine")
+  public Result init() {
+    Result result = new Result();
+    return result;
+  }
 }
