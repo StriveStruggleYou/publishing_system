@@ -1,12 +1,13 @@
 package org.ssy.publish.web.controller;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import javax.persistence.Column;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.ReflectionUtils.FieldCallback;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.ssy.publish.web.core.Result;
 import org.ssy.publish.web.core.ResultGenerator;
 import org.ssy.publish.web.model.MachineServer;
@@ -20,10 +21,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import org.ssy.publish.web.vo.Select2Option;
 import org.ssy.publish.web.vo.TableColumn;
+import tk.mybatis.mapper.entity.Condition;
 
 /**
- * Created by CodeGenerator on 2018/06/29.
+ * Created by CodeGenerator on 2018/08/08.
  */
 @RestController
 @RequestMapping("/machine/server")
@@ -65,16 +68,6 @@ public class MachineServerController {
     return ResultGenerator.genSuccessResult(pageInfo);
   }
 
-
-  @PostMapping("/rows_json")
-  public Object rows_json(@RequestParam(defaultValue = "0") Integer page,
-      @RequestParam(defaultValue = "0") Integer size) {
-    PageHelper.startPage(page, size);
-    List<MachineServer> list = machineServerService.findAll();
-    return list;
-  }
-
-
   @PostMapping("columns_json")
   public Object columns_json() {
     final List<TableColumn> list = new ArrayList<TableColumn>();
@@ -105,4 +98,26 @@ public class MachineServerController {
     Result result = new Result();
     return result;
   }
+
+
+  @GetMapping("/query")
+  public Result query(@RequestParam(defaultValue = "1") Long clusterId) {
+    Result result = new Result();
+    List<Select2Option> optionList = new ArrayList<>();
+    Condition condition = new Condition(MachineServer.class);
+    condition.and().andEqualTo("msClusterId", clusterId);
+    List<MachineServer> msList = machineServerService
+        .findByCondition(condition);
+    if (CollectionUtils.isNotEmpty(msList)) {
+      for (MachineServer machineServer : msList) {
+        Select2Option select2Option = new Select2Option();
+        select2Option.setId(machineServer.getId());
+        select2Option.setText(machineServer.getMsName());
+        optionList.add(select2Option);
+      }
+    }
+    result.setData(optionList);
+    return result;
+  }
+
 }

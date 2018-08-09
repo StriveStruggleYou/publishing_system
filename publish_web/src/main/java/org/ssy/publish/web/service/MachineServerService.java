@@ -4,7 +4,7 @@ import org.ssy.publish.web.core.Service;
 
 
 /**
- * Created by CodeGenerator on 2018/06/29.
+ * Created by CodeGenerator on 2018/08/08.
  */
 public interface MachineServerService extends Service<MachineServer> {
 
